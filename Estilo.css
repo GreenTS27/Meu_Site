@@ -1,0 +1,46 @@
+* {
+    text-align: center;
+}
+
+h1 {
+    font-family:Times New Roman;
+    font-size:2.3cm;
+    text-shadow: 2px 2px 4px grey;
+    margin: 2%;
+}
+
+.Theme_box {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    width: 150px;
+    height: 140px;
+    position: absolute;
+    top: 3mm;
+    right: 1mm;
+    margin: 7.5mm;
+    text-align: center;
+    line-height: 7mm;
+    border-radius: 3mm;
+    border-style: dotted;
+}
+
+.Light {
+    background-color:#ffffff;
+    color: rgb(0, 0, 0);
+    /* text-shadow: 2px 2px 2px black; */
+}
+.LightGreen {
+    background-color:#97E0A3;
+    color: rgb(0, 0, 0);
+}
+.Dark {
+    background-color:#0a0b0a;
+    color: rgb(224, 224, 224);
+
+}
+.GoldPurple {
+    background-color:rgb(58, 31, 165);
+    color: rgb(225, 186, 102);
+
+}
