@@ -1,6 +1,7 @@
 // Vou criar a minha página com o objetivo de ensinar física ao pessoal
 
 window.onload = function() {
+    document.body.className = "Dark";
     document.getElementById("ChangeTheme").addEventListener("click",ChooseTheme);
 }
 

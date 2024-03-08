@@ -2,12 +2,29 @@
     text-align: center;
 }
 
+html {
+    height: 100%;
+}
+body {
+    height:90%;
+    width:90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
 h1 {
     font-family:Times New Roman;
     font-size:2.3cm;
     text-shadow: 2px 2px 4px grey;
-    margin: 2%;
+    /* margin: 5%; */
 }
+h3 {
+    font-family:Times New Roman;
+    font-size:0.75cm;
+    text-shadow: 1px 1px 2px grey;
+    /* margin: 5%; */
+}
+
+
 
 .Theme_box {
     display: block;
@@ -16,17 +33,22 @@ h1 {
     width: 150px;
     height: 140px;
     position: absolute;
-    top: 3mm;
-    right: 1mm;
-    margin: 7.5mm;
+    top: 5%;
+    right: 2.5%;
+    margin: 2.5%;
     text-align: center;
     line-height: 7mm;
     border-radius: 3mm;
     border-style: dotted;
 }
+.Dark {
+    background-image: linear-gradient(rgb(0, 27, 10), rgb(15, 15, 15));
+    /* background-color:#0a0b0a; */
+    color: rgb(224, 224, 224);
+}
 
 .Light {
-    background-color:#ffffff;
+    background-color:#f3f3f3;
     color: rgb(0, 0, 0);
     /* text-shadow: 2px 2px 2px black; */
 }
@@ -34,13 +56,15 @@ h1 {
     background-color:#97E0A3;
     color: rgb(0, 0, 0);
 }
-.Dark {
-    background-color:#0a0b0a;
-    color: rgb(224, 224, 224);
+
+.GoldPurple {
+    background-color:rgb(40, 18, 130);
+    color: rgb(239, 184, 65);
 
 }
-.GoldPurple {
-    background-color:rgb(58, 31, 165);
-    color: rgb(225, 186, 102);
+
+.Backspace {
+    border-color: aqua;
+    border-width: 2px;
 
 }
