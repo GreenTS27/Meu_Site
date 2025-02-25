@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Eletromagnetismo</title>
+    <link href="Estilo.css" rel="stylesheet">
+    <script src="Cerebro.js"></script>
+</head>
+<body>
+    <h1>Eletromagnetismo</h1>
+
+
+    <div class="Theme_box"> 
+        <label>Dark Theme</label>
+        <input type="radio" name="Themes" value="Dark" checked="checked">
+        <br>
+        <label>Light Theme</label>
+        <input type="radio" name="Themes" value="Light" >
+        <br>
+        <label>Light Green</label>
+        <input type="radio" name="Themes" value="LightGreen">
+        <br>
+        <label>Golden Purple</label>
+        <input type="radio" name="Themes" value="GoldPurple">
+        <br>
+        <input type="button" id="ChangeTheme" value="Change Theme">
+    </div>
+
+
+    <div id="markdown-content">
+        <!-- Markdown content will be rendered here -->
+    </div>
+
+    <script>
+        fetch('Eletromagnetismo_notas.md')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(markdownText => {
+            document.getElementById('markdown-content').innerHTML = marked.parse(markdownText);
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o arquivo Markdown:', error);
+            document.getElementById('markdown-content').innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
+        });
+    </script>
+
+    <a href="index.html">Voltar para a página principal</a>
+</body>
+</html>
