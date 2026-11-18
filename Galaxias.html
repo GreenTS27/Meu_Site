@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <title>Galáxias</title>
     <link href="Estilo.css" rel="stylesheet">
-    <script src="Cerebro.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Load marked: markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
+    <!-- Load KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    <!-- My srcipts -->
+    <script src="Cerebro.js"></script> 
 </head>
 <body>
     <div class="Theme_box"> 
@@ -25,26 +31,7 @@
     </div>
 
     <h1>Galáxias</h1>
-
         <div id="markdown-content" data-md="Photometric_filters.md"></div>
-
-        <!-- <script>    
-            fetch('Photometric_filters.md')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status} — file not found?`);
-                }
-                return response.text();
-            })
-            .then(markdownText => {
-                document.getElementById('markdown-content').innerHTML = marked.parse(markdownText);
-            })
-            .catch(error => {
-                console.error('Erro ao carregar o arquivo Markdown:', error);
-                document.getElementById('markdown-content').innerHTML =
-                    '<p>Erro ao carregar o conteúdo: ' + error.message + '</p>';
-            });
-        </script> -->
 
     <a href="index.html">Voltar para a página principal</a>
 </body>

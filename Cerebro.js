@@ -10,7 +10,7 @@ function ChooseTheme() {
 }
 
 
-// Import md file data 
+// Load md file data: include md and Latex parser
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-md]').forEach(container => {
     const file = container.dataset.md;
@@ -23,7 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.text();
       })
       .then(markdownText => {
+        // 1. Markdown → HTML
         container.innerHTML = marked.parse(markdownText);
+
+        // 2. LaTeX → typeset math
+        renderMathInElement(container, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$',  right: '$',  display: false },   // inline $...$
+          ],
+          throwOnError: false   // show errors inline instead of crashing
+        });
       })
       .catch(error => {
         console.error('Erro ao carregar o arquivo Markdown:', error);
