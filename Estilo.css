@@ -31,6 +31,19 @@ h3 {
 }
 
 
+.Titulo_pag_inicial {
+    font-family:Times New Roman;
+    font-size:2.5cm;
+    text-shadow: 2px 2px 4px grey;
+    /* margin: 5%; */
+}
+.Titulo_pag {
+    font-family:Times New Roman;
+    font-size:2.3cm;
+    text-shadow: 2px 2px 4px grey;
+    /* margin: 5%; */
+}
+
 
 .Theme_box {
     display: block;
